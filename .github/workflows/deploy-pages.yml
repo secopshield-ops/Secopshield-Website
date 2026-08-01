@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - secopshield-ops-fuzzy-broccoli
+  workflow_dispatch:
 
 permissions:
   contents: write
