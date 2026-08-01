@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import {
   Shield,
   AlertTriangle,
-  Tool,
+  Wrench,
   Package,
   Bug,
   Clock,
@@ -26,7 +26,7 @@ export default function Modules() {
     { icon: <AlertTriangle size={24} />, title: 'Endpoint Detection & Response', desc: 'Real-time threat detection and response' },
     { icon: <Globe size={24} />, title: 'Extended Detection & Response', desc: 'Cross-platform threat intelligence' },
     { icon: <Package size={24} />, title: 'IT Asset Management', desc: 'Hardware and software inventory' },
-    { icon: <Tool size={24} />, title: 'Patch Management', desc: 'Automated vulnerability patching' },
+    { icon: <Wrench size={24} />, title: 'Patch Management', desc: 'Automated vulnerability patching' },
     { icon: <Lock size={24} />, title: 'Zero Trust Security', desc: 'Identity and access verification' },
     { icon: <Bug size={24} />, title: 'Vulnerability Management', desc: 'Vulnerability discovery and remediation' },
     { icon: <Clock size={24} />, title: 'Incident Response', desc: 'Orchestrated response automation' },

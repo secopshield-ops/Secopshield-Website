@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
 import SectionTitle from '../components/SectionTitle'
 
 export default function Platform() {

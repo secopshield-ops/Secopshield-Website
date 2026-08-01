@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Globe, MapPin, AlertCircle } from 'lucide-react'
+import { Globe, MapPin } from 'lucide-react'
 import SectionTitle from '../components/SectionTitle'
 
 export default function ThreatIntel() {

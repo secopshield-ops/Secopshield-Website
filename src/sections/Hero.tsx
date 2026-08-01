@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, Shield, Zap, Lock } from 'lucide-react'
-import Button from './Button'
+import Button from '../components/Button'
 
 export default function Hero() {
   const containerVariants = {

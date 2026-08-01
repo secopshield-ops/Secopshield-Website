@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { BarChart3, TrendingUp, AlertCircle, CheckCircle } from 'lucide-react'
+import { BarChart3, CheckCircle } from 'lucide-react'
 import SectionTitle from '../components/SectionTitle'
 
 export default function Dashboard() {

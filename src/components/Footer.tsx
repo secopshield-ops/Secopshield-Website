@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import { Mail, Linkedin, Twitter, Github } from 'lucide-react'
 
 export default function Footer() {
