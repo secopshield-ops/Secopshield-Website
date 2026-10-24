@@ -8,6 +8,10 @@ import {
   Settings,
   Network,
   BarChart3,
+  Brain,
+  Cloud,
+  KeyRound,
+  Database,
 } from 'lucide-react'
 import SectionTitle from '../components/SectionTitle'
 import Card from '../components/Card'
@@ -27,7 +31,7 @@ export default function Features() {
     {
       icon: <Settings size={32} />,
       title: 'Patch Management',
-      description: 'Automated vulnerability patching with zero downtime',
+      description: 'Patch policies, approvals, exceptions, and remediation tracking',
     },
     {
       icon: <Eye size={32} />,
@@ -52,7 +56,27 @@ export default function Features() {
     {
       icon: <Network size={32} />,
       title: 'Network Visibility',
-      description: 'Complete network monitoring and threat intelligence',
+      description: 'Network discovery, topology, SNMP monitoring, and security context',
+    },
+    {
+      icon: <Cloud size={32} />,
+      title: 'Cloud & Container Security',
+      description: 'Cloud posture, identity, exposure, and container-security workflows',
+    },
+    {
+      icon: <KeyRound size={32} />,
+      title: 'Identity Governance',
+      description: 'Identity visibility, access governance, SSO, SCIM, and MFA controls',
+    },
+    {
+      icon: <Brain size={32} />,
+      title: 'AI Governance',
+      description: 'AI asset oversight, model governance, usage monitoring, and policy controls',
+    },
+    {
+      icon: <Database size={32} />,
+      title: 'Data Security & Privacy',
+      description: 'Data-risk policy, DLP controls, privacy operations, and DPDP workflows',
     },
   ]
 
@@ -60,8 +84,8 @@ export default function Features() {
     <section className="py-section px-4 sm:px-6 lg:px-8 bg-dark-card/30">
       <div className="max-w-7xl mx-auto">
         <SectionTitle
-          title="Comprehensive Security Platform"
-          subtitle="All-in-one solution replacing 10+ disconnected tools"
+          title="Connected Security & Technology Operations"
+          subtitle="Operational capabilities for security, IT, risk, privacy, and AI governance"
         />
 
         <motion.div

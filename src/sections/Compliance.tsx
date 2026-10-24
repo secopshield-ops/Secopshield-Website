@@ -4,14 +4,14 @@ import SectionTitle from '../components/SectionTitle'
 
 export default function Compliance() {
   const frameworks = [
-    { name: 'NIST CSF', logo: '🔐', status: 'Full Coverage' },
-    { name: 'ISO 27001', logo: '📋', status: 'Mapped' },
-    { name: 'SOC 2 Type II', logo: '✓', status: 'Audited' },
-    { name: 'PCI DSS', logo: '💳', status: 'Compliant' },
-    { name: 'HIPAA', logo: '🏥', status: 'Ready' },
-    { name: 'GDPR', logo: '🌍', status: 'Compliant' },
-    { name: 'DPDP Act', logo: '🇮🇳', status: 'Compliant' },
-    { name: 'MITRE ATT&CK', logo: '🎯', status: 'Mapped' },
+    { name: 'NIST CSF', logo: '🔐', status: 'Control mapping' },
+    { name: 'ISO 27001', logo: '📋', status: 'Control mapping' },
+    { name: 'SOC 2', logo: '✓', status: 'Evidence workflows' },
+    { name: 'PCI DSS', logo: '💳', status: 'Evidence workflows' },
+    { name: 'HIPAA', logo: '🏥', status: 'Framework support' },
+    { name: 'GDPR', logo: '🌍', status: 'Privacy workflows' },
+    { name: 'DPDP Act', logo: '🇮🇳', status: 'Privacy workflows' },
+    { name: 'MITRE ATT&CK', logo: '🎯', status: 'Technique mapping' },
   ]
 
   return (
@@ -19,7 +19,7 @@ export default function Compliance() {
       <div className="max-w-7xl mx-auto">
         <SectionTitle
           title="Enterprise Compliance Automation"
-          subtitle="Continuous compliance across all major frameworks"
+          subtitle="Control mapping, evidence, readiness, and privacy workflows across key frameworks"
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
