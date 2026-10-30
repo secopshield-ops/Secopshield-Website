@@ -1,7 +1,7 @@
-import { ArrowRight, BarChart3, CheckCircle2, ChevronRight, Crosshair, Eye, Gauge, Layers3, ShieldCheck, Sparkles } from 'lucide-react'
+import { ArrowRight, BarChart3, CheckCircle2, ChevronRight, Crosshair, Eye, Gauge, Layers, ShieldCheck, Sparkles } from 'lucide-react'
 
 const capabilities = [
-  ['Endpoint operations', 'Manage devices, applications, policies, assets, and patching from one operating view.', Layers3],
+  ['Endpoint operations', 'Manage devices, applications, policies, assets, and patching from one operating view.', Layers],
   ['Detection & response', 'Investigate security signals, coordinate response, and document the work that follows.', Crosshair],
   ['Exposure management', 'Connect assets, vulnerabilities, business context, and remediation ownership.', ShieldCheck],
   ['Governance & compliance', 'Collect evidence, monitor controls, and make audit readiness visible.', CheckCircle2],
