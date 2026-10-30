@@ -1,81 +1,9 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-
-/* Global Styles */
-* {
-  @apply transition-colors duration-300;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  @apply bg-dark-bg text-gray-300 font-inter;
-}
-
-/* Glass Morphism */
-.glass {
-  @apply bg-dark-card/30 backdrop-blur-xl border border-white/10 rounded-lg;
-}
-
-.glass:hover {
-  @apply border-white/20 bg-dark-card/40;
-}
-
-/* Gradient Text */
-.gradient-text {
-  @apply bg-gradient-to-r from-primary-blue to-primary-cyan bg-clip-text text-transparent;
-}
-
-/* Animations */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-@keyframes glow {
-  0%, 100% {
-    text-shadow: 0 0 20px rgba(37, 99, 235, 0.5);
-  }
-  50% {
-    text-shadow: 0 0 40px rgba(6, 182, 212, 0.8);
-  }
-}
-
-.float {
-  animation: float 6s ease-in-out infinite;
-}
-
-.glow {
-  animation: glow 3s ease-in-out infinite;
-}
-
-/* Scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  @apply bg-dark-bg;
-}
-
-::-webkit-scrollbar-thumb {
-  @apply bg-primary-blue/50 rounded-full;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  @apply bg-primary-blue;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .heading-lg {
-    @apply text-4xl;
-  }
-}
+html { scroll-behavior: smooth; background: #07101c; }
+body { margin: 0; background: #07101c; color: #d5dfec; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+* { box-sizing: border-box; } a { transition: color .2s ease, background-color .2s ease, border-color .2s ease, transform .2s ease; }
+.hero-grid { background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px); background-size: 56px 56px; }.hero-orb { position:absolute; width:42rem; height:42rem; border-radius:9999px; filter:blur(95px); pointer-events:none; opacity:.16; }.hero-orb-one { right:-16rem; top:-19rem; background:#22d3ee; }.hero-orb-two { left:-22rem; bottom:-30rem; background:#2563eb; }
+.eyebrow { display:flex; align-items:center; gap:.45rem; color:#67e8f9; font-size:.7rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; }.section-heading { font-size:clamp(2.25rem,4vw,4rem); font-weight:600; line-height:1.04; letter-spacing:-.045em; color:#fff; }.cta-primary,.cta-secondary { display:inline-flex; align-items:center; justify-content:center; gap:.55rem; border-radius:.65rem; padding:.85rem 1.15rem; font-size:.9rem; font-weight:650; }.cta-primary { background:#a5f3fc; color:#06101c; }.cta-primary:hover { background:#cffafe; transform:translateY(-1px); }.cta-secondary { border:1px solid rgba(255,255,255,.16); color:#e2e8f0; }.cta-secondary:hover { border-color:rgba(165,243,252,.7); color:#cffafe; }
+.command-card { border:1px solid rgba(165,243,252,.20); border-radius:1rem; overflow:hidden; background:linear-gradient(145deg,rgba(18,40,64,.92),rgba(6,16,28,.92)); box-shadow:0 30px 80px rgba(0,0,0,.35); }.status-dot { width:.45rem; height:.45rem; border-radius:99px; background:#6ee7b7; box-shadow:0 0 0 4px rgba(110,231,183,.1); }.metric { border:1px solid rgba(255,255,255,.08); border-radius:.75rem; padding:1rem; background:rgba(3,10,20,.48); }.metric-wide { grid-column:span 2; }.metric span,.metric small { display:block; font-size:.7rem; color:#94a3b8; }.metric strong { display:block; margin:.38rem 0; font-size:1.7rem; font-weight:600; color:#fff; }.metric strong span { display:inline; font-size:.8rem; color:#64748b; margin-left:.2rem; }.meter { height:.35rem; overflow:hidden; border-radius:99px; background:#1e293b; }.meter b { display:block; width:87%; height:100%; border-radius:99px; background:#67e8f9; }.activity { display:flex; align-items:center; gap:.55rem; padding:.42rem 0; font-size:.78rem; color:#cbd5e1; }.activity i { width:.38rem; height:.38rem; border-radius:99px; background:#38bdf8; }.activity .activity-alert { background:#fbbf24; }.activity time { margin-left:auto; color:#64748b; font-size:.7rem; }

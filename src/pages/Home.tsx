@@ -1,35 +1,26 @@
-import Hero from '../sections/Hero'
-import TrustedBy from '../sections/TrustedBy'
-import Platform from '../sections/Platform'
-import Features from '../sections/Features'
-import Modules from '../sections/Modules'
-import Copilot from '../sections/Copilot'
-import ThreatIntel from '../sections/ThreatIntel'
-import Dashboard from '../sections/Dashboard'
-import Compliance from '../sections/Compliance'
-import Benefits from '../sections/Benefits'
-import Pricing from '../sections/Pricing'
-import Testimonials from '../sections/Testimonials'
-import FAQ from '../sections/FAQ'
-import CTA from '../sections/CTA'
+import { ArrowRight, BarChart3, CheckCircle2, ChevronRight, Crosshair, Eye, Gauge, Layers3, ShieldCheck, Sparkles } from 'lucide-react'
+
+const capabilities = [
+  ['Endpoint operations', 'Manage devices, applications, policies, assets, and patching from one operating view.', Layers3],
+  ['Detection & response', 'Investigate security signals, coordinate response, and document the work that follows.', Crosshair],
+  ['Exposure management', 'Connect assets, vulnerabilities, business context, and remediation ownership.', ShieldCheck],
+  ['Governance & compliance', 'Collect evidence, monitor controls, and make audit readiness visible.', CheckCircle2],
+  ['Threat intelligence', 'Enrich alerts with context that helps analysts make faster decisions.', Eye],
+  ['Executive visibility', 'Turn operational activity into a clear view of posture, progress, and risk.', BarChart3],
+]
 
 export default function Home() {
-  return (
-    <>
-      <Hero />
-      <TrustedBy />
-      <Platform />
-      <Features />
-      <Modules />
-      <Copilot />
-      <ThreatIntel />
-      <Dashboard />
-      <Compliance />
-      <Benefits />
-      <Pricing />
-      <Testimonials />
-      <FAQ />
-      <CTA />
-    </>
-  )
+  return <>
+    <section id="top" className="hero-grid relative overflow-hidden px-5 pb-20 pt-20 sm:px-8 lg:pb-28 lg:pt-28">
+      <div className="hero-orb hero-orb-one" /><div className="hero-orb hero-orb-two" />
+      <div className="relative mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[1.02fr_.98fr]">
+        <div><p className="eyebrow"><Sparkles size={14} /> AI-powered security operations</p><h1 className="mt-6 max-w-3xl text-5xl font-semibold leading-[.98] tracking-[-.055em] text-white sm:text-6xl lg:text-7xl">One operating model for <span className="text-cyan-300">security that moves.</span></h1><p className="mt-7 max-w-xl text-lg leading-8 text-slate-300">SecOpShield brings endpoint, security, compliance, network, and identity operations into one shared command layer—so your team can see clearly, prioritise deliberately, and respond with control.</p><div className="mt-9 flex flex-col gap-3 sm:flex-row"><a href="mailto:admin@secopshield.com?subject=SecOpShield%20consultation" className="cta-primary">Book a consultation <ArrowRight size={17} /></a><a href="#platform" className="cta-secondary">Explore the platform <ChevronRight size={17} /></a></div><div className="mt-11 flex flex-wrap gap-x-7 gap-y-3 text-sm text-slate-400"><span>Based in Chennai, India</span><span className="hidden h-4 w-px bg-slate-700 sm:block" /><span>Built for enterprise accountability</span></div></div>
+        <div className="command-card"><div className="flex items-center justify-between border-b border-white/10 px-5 py-4"><div><p className="text-[11px] font-semibold uppercase tracking-[.16em] text-cyan-300">SecOpShield Command</p><p className="mt-1 text-sm text-slate-400">Live operational context</p></div><span className="flex items-center gap-2 text-xs text-emerald-300"><i className="status-dot" /> Systems active</span></div><div className="grid gap-3 p-5 sm:grid-cols-2"><div className="metric metric-wide"><span>Security posture</span><strong>87<span>/100</span></strong><div className="meter"><b /></div><small>Managed posture</small></div><div className="metric"><span>Assets monitored</span><strong>2,847</strong><small>Across your environment</small></div><div className="metric"><span>Open exposures</span><strong className="text-amber-300">24</strong><small>Owner-assigned work</small></div></div><div className="mx-5 mb-5 rounded-xl border border-white/8 bg-slate-950/50 p-4"><p className="mb-3 text-[11px] font-semibold uppercase tracking-[.14em] text-slate-500">Priority activity</p>{['Critical exposure identified', 'Policy enforcement completed', 'Compliance evidence updated'].map((item, i) => <div key={item} className="activity"><i className={i === 0 ? 'activity-alert' : ''} /><span>{item}</span><time>{i === 0 ? 'Now' : `${i * 8 + 8}m`}</time></div>)}</div><p className="px-5 pb-5 text-xs text-slate-500">Illustrative interface · Analyst-controlled automation</p></div>
+      </div>
+    </section>
+    <section className="border-y border-white/8 bg-slate-950/30 px-5 py-7 sm:px-8"><div className="mx-auto flex max-w-7xl flex-col gap-5 md:flex-row md:items-center md:justify-between"><p className="max-w-sm text-sm leading-6 text-slate-400">Replace scattered tools with an operational view that connects the work.</p><div className="flex flex-wrap gap-x-7 gap-y-3 text-sm font-medium text-slate-300"><span>Observe</span><span className="text-cyan-400">→</span><span>Prioritise</span><span className="text-cyan-400">→</span><span>Respond</span><span className="text-cyan-400">→</span><span>Demonstrate control</span></div></div></section>
+    <section id="platform" className="px-5 py-24 sm:px-8 lg:py-32"><div className="mx-auto max-w-7xl"><p className="eyebrow">One connected platform</p><div className="mt-5 flex max-w-4xl flex-col gap-5 lg:flex-row lg:items-end lg:justify-between"><h2 className="section-heading">A calmer way to run security.</h2><p className="max-w-md leading-7 text-slate-400">Designed for security, IT, risk, privacy, and AI-governance teams that need shared facts—not another silo.</p></div><div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 md:grid-cols-2 lg:grid-cols-3">{capabilities.map(([title, copy, Icon]) => { const CapIcon = Icon as typeof ShieldCheck; return <article key={title as string} className="group bg-[#091321] p-7 transition hover:bg-[#0d1a2b]"><CapIcon className="text-cyan-300" size={22}/><h3 className="mt-12 text-xl font-medium text-white">{title as string}</h3><p className="mt-3 text-sm leading-6 text-slate-400">{copy as string}</p><span className="mt-7 inline-flex items-center gap-1 text-sm text-cyan-300 opacity-0 transition group-hover:opacity-100">Learn more <ArrowRight size={15}/></span></article>})}</div></div></section>
+    <section id="why" className="px-5 pb-24 sm:px-8 lg:pb-32"><div className="mx-auto grid max-w-7xl overflow-hidden rounded-3xl border border-white/10 bg-[#0d1b2d] lg:grid-cols-2"><div className="p-8 sm:p-12"><p className="eyebrow">Built for accountability</p><h2 className="section-heading mt-5">From signal to accountable outcome.</h2><p className="mt-6 max-w-lg leading-7 text-slate-400">Security work becomes clearer when every finding has context, an owner, and an observable path to closure.</p><div className="mt-9 space-y-5">{[['Clear ownership', 'Connect findings to assets, owners, remediation actions, and outcomes.'], ['Practical adoption', 'Support security and IT teams in the operating model they use every day.'], ['Measured progress', 'Track exposure, response readiness, and the work completed to improve it.']].map(([title, copy]) => <div key={title} className="flex gap-4"><CheckCircle2 className="mt-1 shrink-0 text-cyan-300" size={19}/><div><h3 className="font-medium text-white">{title}</h3><p className="mt-1 text-sm leading-6 text-slate-400">{copy}</p></div></div>)}</div></div><div className="relative min-h-[360px] overflow-hidden border-t border-white/10 p-8 lg:border-l lg:border-t-0"><div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,rgba(34,211,238,.18),transparent_48%)]"/><div className="relative mx-auto mt-9 max-w-sm rounded-2xl border border-cyan-300/20 bg-slate-950/70 p-6 shadow-2xl"><div className="flex items-center gap-3"><div className="rounded-lg bg-cyan-400/10 p-2"><Gauge className="text-cyan-300" size={21}/></div><div><p className="text-sm font-medium text-white">Control health</p><p className="text-xs text-slate-500">Evidence-ready view</p></div></div><div className="mt-7 flex items-end gap-2"><strong className="text-5xl font-semibold text-white">87</strong><span className="mb-1 text-sm text-slate-500">/ 100</span></div><div className="mt-5 grid h-20 grid-cols-8 items-end gap-1">{[35,48,42,63,55,72,68,87].map((h,i)=><i key={i} className="rounded-t bg-cyan-300/80" style={{height:`${h}%`}}/>)}</div></div><p className="relative mt-9 text-center text-sm text-slate-500">Operational clarity, from endpoint to boardroom.</p></div></div></section>
+    <section className="px-5 pb-24 sm:px-8 lg:pb-32"><div className="mx-auto max-w-7xl rounded-3xl border border-cyan-300/20 bg-gradient-to-br from-cyan-400/15 via-[#0d1d31] to-[#0a1321] px-7 py-14 text-center sm:px-12"><p className="eyebrow justify-center">Start the conversation</p><h2 className="section-heading mx-auto mt-5 max-w-3xl">Security operations with an enterprise mindset.</h2><p className="mx-auto mt-6 max-w-2xl leading-7 text-slate-300">Tell us about your environment, challenges, and priorities. We’ll help identify the right starting point.</p><div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row"><a href="mailto:admin@secopshield.com?subject=SecOpShield%20consultation" className="cta-primary">Talk to an expert <ArrowRight size={17}/></a><a href="tel:+919677535605" className="cta-secondary">Call +91 96775 35605</a></div></div></section>
+  </>
 }
